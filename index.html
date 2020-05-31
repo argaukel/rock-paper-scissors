@@ -9,7 +9,18 @@
 
 <body>
     <script type="text/javascript">
-        var computerChoice = ["r", "p", "s"]
+        var computerChoices = ["r", "p", "s"]
+
+        document.onkeyup = function(event) {
+            var userGuess = event.key;
+            //The key property returns the identifier of the key that was pressed when a key event occured
+            //Get the keyboard button that was pressed when a key event occured
+            var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+            console.log("User Guess = " + userGuess);
+            console.log("Computer guess = " + computerGuess);
+            //math.floor returns the nearest whole integer to the given value
+            //math.random creates a random integer <1
+        }
     </script>
 </body>
 
