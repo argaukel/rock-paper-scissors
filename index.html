@@ -43,12 +43,22 @@
                 alert("rock crushes scissors!")
             } else {
                 alert("I didn't expect this!")
-            }
+            };
 
             if (userGuess == computerGuess) {
                 ties++;
-                console.log(ties)
-            }
+                console.log("Number of ties " + ties)
+            };
+
+            if (userGuess == "p" && computerGuess == "r" || userGuess == "r" && computerGuess == "s" || userGuess == "s" && computerGuess == "p") {
+                wins++;
+                console.log("Number of wins " + wins)
+            };
+
+            if (userGuess == "p" && computerGuess == "s" || userGuess == "r" && computerGuess == "p" || userGuess == "s" && computerGuess == "r") {
+                losses++;
+                console.log("Number of losses " + losses)
+            };
 
             var gameDiv = document.getElementById("game");
             gameDiv.textContent = "Wins: " + wins + " - Losses: " + losses + " - Ties: " + ties;
