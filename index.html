@@ -24,6 +24,12 @@
             //because the possible positions for responses to computerChoices are 0 1 and 2, this will allow a randomly choosen result for computerGuess
             alert("User guess: " + userGuess);
             alert("Computer guess: " + computerGuess);
+
+            if (userGuess === computerGuess) {
+                alert("It's a tie!")
+            } else {
+                alert("I didn't expect this!")
+            }
         }
     </script>
 </body>
