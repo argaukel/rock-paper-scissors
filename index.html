@@ -11,7 +11,7 @@
     <script type="text/javascript">
         var computerChoices = ["r", "p", "s"]
 
-        document.onkeyup = function(event) {
+        document.onkeyup = function (event) {
             var userGuess = event.key;
             //The key property returns the identifier of the key that was pressed when a key event occured
             //Get the keyboard button that was pressed when a key event occured
@@ -27,6 +27,10 @@
 
             if (userGuess === computerGuess) {
                 alert("It's a tie!")
+            } else if (userGuess === "p" && computerGuess === "r" || userGuess === "r" && computerGuess === "p") {
+                alert("paper covers rock!")
+            } else if (userGuess === "p" && computerGuess === "s") {
+                alert("scissors cuts paper!")
             } else {
                 alert("I didn't expect this!")
             }
