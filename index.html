@@ -44,6 +44,14 @@
             } else {
                 alert("I didn't expect this!")
             }
+
+            if (userGuess == computerGuess) {
+                ties++;
+                console.log(ties)
+            }
+
+            var gameDiv = document.getElementById("game");
+            gameDiv.textContent = "Wins: " + wins + " - Losses: " + losses + " - Ties: " + ties;
         }
     </script>
 </body>
