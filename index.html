@@ -29,8 +29,10 @@
                 alert("It's a tie!")
             } else if (userGuess === "p" && computerGuess === "r" || userGuess === "r" && computerGuess === "p") {
                 alert("paper covers rock!")
-            } else if (userGuess === "p" && computerGuess === "s") {
+            } else if (userGuess === "p" && computerGuess === "s" || userGuess === "s" && computerGuess === "p") {
                 alert("scissors cuts paper!")
+            } else if (userGuess === "r" && computerGuess === "s" || userGuess === "s" && computerGuess === "r") {
+                alert("rock crushes scissors!")
             } else {
                 alert("I didn't expect this!")
             }
