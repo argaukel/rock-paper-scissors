@@ -8,7 +8,11 @@
 </head>
 
 <body>
-
+    <div>
+        Rock Paper Scissors!
+        <br>
+        Type R (for rock) S (for scissor) or P (for paper) to see if you beat the computer!
+    </div>
     <div id="game">
 
     </div>
@@ -50,12 +54,14 @@
                 console.log("Number of ties " + ties)
             };
 
-            if (userGuess == "p" && computerGuess == "r" || userGuess == "r" && computerGuess == "s" || userGuess == "s" && computerGuess == "p") {
+            if (userGuess == "p" && computerGuess == "r" || userGuess == "r" && computerGuess == "s" || userGuess ==
+                "s" && computerGuess == "p") {
                 wins++;
                 console.log("Number of wins " + wins)
             };
 
-            if (userGuess == "p" && computerGuess == "s" || userGuess == "r" && computerGuess == "p" || userGuess == "s" && computerGuess == "r") {
+            if (userGuess == "p" && computerGuess == "s" || userGuess == "r" && computerGuess == "p" || userGuess ==
+                "s" && computerGuess == "r") {
                 losses++;
                 console.log("Number of losses " + losses)
             };
