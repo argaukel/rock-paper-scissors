@@ -50,12 +50,14 @@
 
     document.onkeyup = function (event) {
         var userGuess = event.key;
-        var comuterGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-        
+        if (userGuess === "s" || userGuess === "p" || userGuess === "r") {
+            alert("You entered " + userGuess);
+            alert("The computer guessed " + computerGuess)
+        }
+
     }
-
-
     </script>
 </body>
 </html>
