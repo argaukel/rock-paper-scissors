@@ -18,11 +18,11 @@
                   <span class="card-title">Rock Paper Scissors</span>
                   <p>Type R (for rock) S (for scissor) or P (for paper) to see if you beat the computer!</p>
                 </div>
-                <div class="card-action">
+                <div class="card-action white-text">
                     <p id="userchoice-text"></p>
                     <p id="computerchoice-text"></p>
                 </div>
-                <div class="card-action">
+                <div class="card-action white-text">
                     <div id="game"></div>
                 </div>
               </div>
@@ -51,15 +51,23 @@
         if (userGuess === "s" || userGuess === "p" || userGuess === "r") {
             alert("You entered " + userGuess);
             alert("The computer guessed " + computerGuess)
+            userChoiceText.textContent = "You chose " + userGuess;
+            computerChoiceText.textContent = "The computer chose " + computerGuess;
         }
 
         if (userGuess === computerGuess) {
             alert("It's a tie") 
+            ties++;
+        } else if (userGuess === "s" && computerGuess === "p" || userGuess === "r" && computerGuess === "s" || userGuess === "p" && computerGuess === "r") {
+            alert("You won!")
+            wins++;
         } else {
-            alert("What happened here?")
+            alert("Computer won")
+            losses++;
         }
 
-        
+        var gameDiv = document.getElementById("game");
+        gameDiv.textContent = "Wins: " + wins + ", Losses: " + losses + ", Ties: " + ties;
 
     }
     </script>
