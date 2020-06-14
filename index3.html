@@ -23,7 +23,7 @@
     var losses = 0;
     var ties = 0;
 
-    var directionsText = document.getElementById("dirextions-text");
+    var directionsText = document.getElementById("directions-text");
     var userChoiceText = document.getElementById("userchoice-text");
     var computerChoiceText = document.getElementById("computerchoice-text");
     var winsText = document.getElementById("wins-text");
@@ -34,6 +34,9 @@
         var userGuess = event.key;
 
         var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+        
+        console.log(userGuess);
+        console.log(computerGuess);
 
         if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
             directionsText.textContent = "";
