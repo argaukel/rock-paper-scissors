@@ -30,7 +30,21 @@
     var lossesText = document.getElementById("losses-text");
     var tiesText = document.getElementById("ties-text");
 
-    
+    document.onkeyup = function(event) {
+        var userGuess = event.key;
+
+        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+        if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
+            directionsText.textContent = "";
+
+            userChoiceText.textContent = "You CHose: " + userGuess;
+            computerChoiceText.textContent = "The computer chose: " + computerGuess;
+            winsText.textContent = "wins: " + wins;
+            lossesText.textContent = "losses: " + losses;
+            tiesText.textContent = "ties: + " + ties;
+        }
+    }
     </script>
 </body>
 </html>
