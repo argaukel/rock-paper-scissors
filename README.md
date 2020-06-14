@@ -10,3 +10,5 @@ the responses from user and "computer" are compared to determine if scissor cuts
 The two answers are recorded and displayed, along with a running score.
 
 index2 utilizies a bit of materialize to spruce it up a bit
+
+index3 has separate divs for computer score, user score, wins and losses, all utlizing p tags and the get element by id command to update the board when the user enters a relevant key stroke
