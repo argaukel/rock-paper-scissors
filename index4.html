@@ -31,7 +31,22 @@
 
     document.onkeyup = function(event) {
         var userGuess = event.key;
-        
+
+        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+         if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
+             if (userGuess === computerGuess) {
+                 ties++;
+             } else if ((userGuess === "r") && (computerGuess === "s") || (userGuess === "p") && (computerGuess === "r") || (userGuess === "s") && (computerGuess === "p")) {
+                 wins++;
+             } else {
+                 losses++;
+             };
+
+             directionsText.textContent = "";
+
+             
+         }
+
     }
     </script>
 </body>
